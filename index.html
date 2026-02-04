@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/gif" href="xnz.png">
+    <title>???</title>
+    <meta content="bub3ns.xyz" property="og:title" />
+    <meta content="✨" property="og:description" />
+    <meta content="https://bub3ns.xyz/" property="og:url" />
+    <meta content="xnz.png" property="og:image">
+</head>
+
+<body>    
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div class="overlay fullscreen">
+        <label for="overlay-toggle" onclick="playAudioAndVideo(); startTitleAnimation();">
+            <span class="hover">click me</span>
+        </label>
+    </div>
+
+    <audio loop preload="auto" id="audio" autoplay="false">
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <video loop preload="auto" id="video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    
+    <div class="center">
+        <p class="nameMain">Hello, I'm <span id="nameGradient" class="nameGradient">bub3ns</span></p>
+        <p class="smallerMain">;3</p>
+        <div class="panel discordPanel">
+            <a id="avatarLink" target="_blank" href="https://discord.com/users/1397165578648551576">
+                <img class="discordAvatar" id="discordAvatar" src="discord.png">
+            </a>
+            <p class="discordName" id="discordName">Discord</p>
+            <p class="discordMotd" id="discordMotd">bub3nsik</p>
+        </div>
+        <div class="gap"></div>
+        <div class="panel telegramPanel">
+            <a id="avatarLink" target="_blank" href="https://github.com/bub3ns">
+                <img class="telegramAvatar" id="telegramAvatar" src="telegram.png">
+            </a>
+            <p class="telegramName" id="telegramName">Github</p>
+            <p class="telegramMotd" id="telegramMotd">bub3ns</p>
+        </div>
+        <div class="gap"></div>
+        <div class="panel namemcPanel">
+            <a id="avatarLink" target="_blank" href="https://namemc.com/profile/awkb">
+                <img class="namemcAvatar" id="namemcAvatar" src="xnz.png">
+            </a>
+            <p class="namemcName" id="namemcName">NameMC</p>
+            <p class="namemcMotd" id="namemcMotd">awkb</p>
+        </div>
+    </div>
+
+</body>
+    <script src="script.js"></script>
+</html>
