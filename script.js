@@ -18,14 +18,14 @@ let titleInterval = null;
 let started = false;
 
 function startTitleAnimation() {
-    if (started) return; // żeby nie odpalić 2x
+    if (started) return; // zeby nie odpalic 2x
     started = true;
 
     document.title = titleText;
 
     titleInterval = setInterval(() => {
-        const first = titleArray.shift(); // zabierz pierwszą literę
-        titleArray.push(first);           // wrzuć ją na koniec
+        const first = titleArray.shift(); // zabierz pierwszą literke
+        titleArray.push(first);           // wjeb ja na koniec
         document.title = titleArray.join("");
     }, 500);
 }
