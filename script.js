@@ -1,15 +1,15 @@
 function playAudioAndVideo() {
-    var audio = document.getElementById('audio');
-    var video = document.getElementById('video');
-    video.volume = 0;
-    audio.volume = 0.3;
+    const audio = document.getElementById('audio');
+    const video = document.getElementById('video');
 
-    if (audio && video) {
-        setTimeout(function () {
-            audio.play();
-        }, 50);
-        video.play();
-    }
+    if (!audio || !video) return;
+
+    // set volume before play()
+    audio.volume = 0.3;
+    video.volume = 0;
+
+    audio.play().catch(() => {});
+    video.play().catch(() => {});
 }
 
 let titleText = "bub3ns.xyz   ";
@@ -18,14 +18,15 @@ let titleInterval = null;
 let started = false;
 
 function startTitleAnimation() {
-    if (started) return; // zeby nie odpalic 2x
+    if (started) return;
     started = true;
 
     document.title = titleText;
 
+    // moving effect
     titleInterval = setInterval(() => {
-        const first = titleArray.shift(); // zabierz pierwszą literke
-        titleArray.push(first);           // wjeb ja na koniec
+        const first = titleArray.shift();
+        titleArray.push(first);
         document.title = titleArray.join("");
     }, 500);
 }
