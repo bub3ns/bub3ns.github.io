@@ -188,6 +188,26 @@ html {
     background-position: 0 50%;
 }
 
+.underline-hover {
+    position: relative;
+    display: inline-block;
+    --uw: 0%;
+    --ul: 0%;
+}
+
+.underline-hover::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: var(--ul);
+
+    height: 2px;
+    width: var(--uw);
+    background: #ffffff;
+
+    pointer-events: none;
+}
+
 @keyframes text-gradient {
     0%, 100% {
         background-position: 0 50%;
@@ -239,7 +259,20 @@ img {
 }
 
 .hover {
-    display: none;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+        color 0.25s ease;
+
+    display: inline-block;
+    will-change: transform;
+}
+
+.hover:hover {
+    color: #cfcfcf;
 }
 
 .fullscreen {
